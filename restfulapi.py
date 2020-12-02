@@ -3,8 +3,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 from flask import Flask,jsonify,render_template,request 
 
 app = Flask(__name__)
-model = pickle.load(open('D:\\python_virtual\\enthire\\airline_model.sav','rb'))
-vocab = pickle.load(open('D:\python_virtual\enthire\\vocab.sav','rb'))
+model = pickle.load(open('airline_model.sav','rb'))
+vocab = pickle.load(open('vocab.sav','rb'))
 
 @app.route('/',methods = ['POST'])
 #@app.route('/api_call',methods = ['POST'])
